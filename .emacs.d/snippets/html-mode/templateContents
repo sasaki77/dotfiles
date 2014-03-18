@@ -1,0 +1,74 @@
+# -*- mode: snippet -*-
+# name: templateContents
+# key: temp
+# --
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ja" lang="ja">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta name="keywords" content="EPICS" />
+    <meta description="Makefile"/>
+    <meta name="robots" content="index,follow" />
+    <link rel="stylesheet" href="sample.css" type="text/css" />
+    <title>Boysenberry Lab:make</title>
+
+    <!-- syntaxhighlighter -->
+    <!-- <link type="text/css" rel="stylesheet" href="http://boysenberry.tk/syntaxhighlighter/styles/shCore.css" /> -->
+    <!-- <link type="text/css" rel="stylesheet" href="http://boysenberry.tk/syntaxhighlighter/styles/shThemeDefault.css" /> -->
+    <!-- <script type="text/javascript" src="http://boysenberry.tk/syntaxhighlighter/scripts/shCore.js"></script> -->
+    <!-- <script type="text/javascript" src="http://boysenberry.tk/syntaxhighlighter/scripts/shBrushBash.js"></script> -->
+
+    <link type="text/css" rel="stylesheet" href="../../syntaxhighlighter/styles/shCore.css" />
+    <link type="text/css" rel="stylesheet" href="../../syntaxhighlighter/styles/shThemeDefault.css" />
+    <script type="text/javascript" src="../../syntaxhighlighter/scripts/shCore.js"></script>
+    <script type="text/javascript" src="../../syntaxhighlighter/scripts/shBrushBash.js"></script>
+    <script type="text/javascript" src="../../syntaxhighlighter/scripts/shBrushCpp.js"></script>
+    <script type="text/javascript" src="../../syntaxhighlighter/scripts/shBrushPlain.js"></script>
+    <script type="text/javascript">SyntaxHighlighter.all();</script>
+    
+  </head>
+  <body>
+    <div id="wrapper">
+
+      <!-- タイトル & メニュー -->
+      <script type="text/javascript" src="menu.js"></script>
+      
+      <!-- コンテンツラッパー -->
+      <div id="contentwrap">
+	<!-- 左メニュー -->
+	<script type="text/javascript" src="submenu.js"></script>
+	
+	<!-- コンテンツ -->
+	<div id="content">
+	  <!-- パンくずリスト -->
+	  <div>
+	    <ol class="pankuzuList">
+	      <li><a href="../../index.html">home</a> &gt; </li>
+	      <li>${1:リスト}</li>
+	    </ol>
+	  </div>
+
+	  <div id="contentMain">
+	    <div>
+	      <h2>${2:コンテンツのタイトル}</h2>
+	    </div>
+	    <div>
+	      <p>$0コンテンツの説明</p>
+	    </div>
+
+	    <div>
+	      <h3>サブタイトル</h3>
+	    </div>
+	    <div>
+	      <p>
+	      コンテンツ
+	      </p>
+	    </div>
+	  </div>
+	</div>
+
+      </div>
+      <div id="fotter">
+      </div>
+    </div>
+  </body>
+</html>

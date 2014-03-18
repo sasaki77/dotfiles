@@ -1,0 +1,5 @@
+=  howmに関する設定を追加してみた
+[2012-11-21 11:15] >>> ~/projects/dotfiles/.emacs.d/init.el
+
+http://www.bookshelf.jp/soft/meadow-38.html#SEC563
+こちらの記事が参考になりました。

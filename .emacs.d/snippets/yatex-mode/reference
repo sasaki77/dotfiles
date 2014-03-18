@@ -1,0 +1,10 @@
+# -*- mode: snippet -*-
+# name: reference
+# key: reference
+# --
+\newpage
+\addcontentsline{toc}{chapter}{参考文献}
+\begin{thebibliography}{${1:number of references}}
+ \bibitem{${2:label}}
+	 ${3:author},${4:book},${5:publisher}, ${6:(year)}
+\end{thebibliography}

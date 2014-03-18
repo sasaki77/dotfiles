@@ -1,0 +1,31 @@
+# -*- mode: snippet -*-
+# name: TemplateReport
+# key: temp
+# --
+\documentclass[11pt,a4paper]{jsarticle}
+%
+\usepackage{amsmath,amssymb}
+\usepackage{bm}
+\usepackage[dvipdfm]{graphicx}
+\usepackage{txfonts}
+\usepackage{ascmac}
+%
+\setlength{\textwidth}{\fullwidth}
+\setlength{\textheight}{40\baselineskip}
+\addtolength{\textheight}{\topskip}
+\setlength{\voffset}{-0.2in}
+\setlength{\topmargin}{0pt}
+\setlength{\headheight}{0pt}
+\setlength{\headsep}{0pt}
+%
+\title{${1:タイトル}}
+\author{佐々木信哉}
+\date{\today}
+\begin{document}
+\maketitle
+%
+%
+$0
+%
+%
+\end{document}

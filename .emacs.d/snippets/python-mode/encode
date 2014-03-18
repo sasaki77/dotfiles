@@ -1,0 +1,5 @@
+# -*- mode: snippet -*-
+# name: encode
+# key: enc
+# --
+# -*- coding: utf-8 -*-

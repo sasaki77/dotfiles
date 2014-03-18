@@ -1,0 +1,5 @@
+# -*- mode: snippet -*-
+# name: scrolling
+# key: scrolling
+# --
+scrolling="$1"

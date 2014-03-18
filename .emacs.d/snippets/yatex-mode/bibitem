@@ -1,0 +1,6 @@
+# -*- mode: snippet -*-
+# name: bibitem
+# key: bibi
+# --
+\bibitem{${1:label}}
+	 ${2:author},${3:book},${4:publisher}, ${5:(year)}

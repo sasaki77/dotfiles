@@ -1,0 +1,10 @@
+# -*- mode: snippet -*-
+# name: figure
+# key: fig
+# --
+\begin{figure}[!htb]
+ \centering
+ \includegraphics[height=5cm]{${1:filename}}
+ \caption{${2:caption}}
+ \label{fig:${3:label}}
+\end{figure}%

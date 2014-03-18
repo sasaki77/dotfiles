@@ -1,0 +1,5 @@
+# -*- mode: snippet -*-
+# name: under line
+# key: u
+# --
+<u>$0</u>

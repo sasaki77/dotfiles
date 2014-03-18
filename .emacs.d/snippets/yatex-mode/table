@@ -1,0 +1,13 @@
+# -*- mode: snippet -*-
+# name: table
+# key: table
+# --
+\begin{table}[htbp]
+\caption{${1:caption}}
+\label{${2:label}}
+\begin{center}
+\begin{tabular}{${3:ll}}
+$0
+\end{tabular}
+\end{center}
+\end{table}

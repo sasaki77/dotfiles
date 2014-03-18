@@ -1,0 +1,5 @@
+# -*- mode: snippet -*-
+# name: width
+# key: width
+# --
+width="$1"

@@ -1,0 +1,5 @@
+# -*- mode: snippet -*-
+# name: color
+# key: color
+# --
+color="$1"$0

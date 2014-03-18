@@ -1,0 +1,5 @@
+# -*- mode: snippet -*-
+# name: center
+# key: cen
+# --
+<center>$0</center>

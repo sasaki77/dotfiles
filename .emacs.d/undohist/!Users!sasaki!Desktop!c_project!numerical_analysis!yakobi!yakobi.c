@@ -1,0 +1,2 @@
+
+((digest . "e329cb104ea93b50e9c19fd256d6c6c5") (undo-list nil (#("s" 0 1 (fontified t face font-lock-function-name-face)) . -91) ((marker . 91) . -1) ((marker . 91) . -1) ((marker . 91) . -1) ((marker . 91) . -1) ((marker*) . 1) nil (#("o" 0 1 (fontified t face font-lock-function-name-face)) . -92) ((marker . 91) . -1) ((marker . 91) . -1) ((marker . 91) . -1) ((marker . 91) . -1) nil (#("r" 0 1 (fontified t face font-lock-function-name-face)) . -93) ((marker . 91) . -1) ((marker . 91) . -1) ((marker . 91) . -1) ((marker . 91) . -1) nil undo-tree-canary))

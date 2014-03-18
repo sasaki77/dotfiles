@@ -1,0 +1,5 @@
+# -*- mode: snippet -*-
+# name: label
+# key: lab
+# --
+\label{${1:$$(yas-choose-value '("fig" "eq" "table"))}:${2:name}}

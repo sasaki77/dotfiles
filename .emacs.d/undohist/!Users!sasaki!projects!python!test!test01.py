@@ -1,0 +1,2 @@
+
+((digest . "80b3bc776f8031ed78f4bf194524e1f6") (undo-list nil (2 . 18) nil (#(" " 0 1 (fontified t face font-lock-comment-face)) . -2) nil (#("!" 0 1 (fontified t face font-lock-comment-face)) . -3) nil (1 . 4) nil (1 . 2) (t . 1372496548) nil (14 . 24) nil (13 . 14) nil (7 . 13) nil (#("c" 0 1 (fontified t face font-lock-comment-face)) . -7) nil (2 . 8) nil (#("!" 0 1 (fontified t face font-lock-comment-face)) . -2) nil (#(" " 0 1 (fontified t face font-lock-comment-face)) . -3) nil (1 . 4) nil (1 . 2) (t . 1372496425) nil undo-tree-canary))

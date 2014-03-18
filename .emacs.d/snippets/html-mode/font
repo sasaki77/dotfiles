@@ -1,0 +1,5 @@
+# -*- mode: snippet -*-
+# name: font
+# key: font
+# --
+<font $1>$0</font>

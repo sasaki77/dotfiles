@@ -1,0 +1,7 @@
+# -*- mode: snippet -*-
+# name: android.button
+# key: but
+# --
+<Button
+$0
+/>

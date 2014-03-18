@@ -1,0 +1,28 @@
+# -*- mode: snippet -*-
+# name: TemplateBrief
+# key: temp
+# --
+\documentclass[11pt,a4paper]{jsarticle}
+%
+\usepackage{amsmath,amssymb}
+\usepackage{bm}
+\usepackage[dvipdfmx]{graphicx}
+\usepackage{ascmac}
+\usepackage{txfonts}
+%
+\setlength{\textwidth}{\fullwidth}
+\setlength{\textheight}{39\baselineskip}
+\addtolength{\textheight}{\topskip}
+\setlength{\voffset}{-0.5in}
+\setlength{\headsep}{0.3in}
+%
+\pagestyle{myheadings}
+\markright{\footnotesize \sf \today}
+\begin{document}
+%
+%
+\section*{◆ ${1:タイトル}  ◆}
+$0
+%
+%
+\end{document}

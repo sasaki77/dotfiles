@@ -1,0 +1,11 @@
+# -*- mode: snippet -*-
+# name: command
+# key: com
+# --
+\begin{itembox}[l]{コマンド}
+\begin{center}
+\begin{tabular}[tb]{ll}
+$0 & \\
+\end{tabular}
+\end{center}
+\end{itembox}

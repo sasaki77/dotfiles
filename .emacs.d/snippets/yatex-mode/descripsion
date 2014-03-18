@@ -1,0 +1,8 @@
+# -*- mode: snippet -*-
+# name: descripsion
+# key: des
+# --
+\begin{description}
+\item[${1:title}] \mbox{}\\
+$0
+\end{description}

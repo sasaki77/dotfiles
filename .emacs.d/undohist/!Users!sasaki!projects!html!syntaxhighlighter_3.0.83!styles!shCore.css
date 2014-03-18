@@ -1,0 +1,11 @@
+
+((digest . "eaf786327fea3715d48f01b1208297af") (undo-list nil (#("
+" 0 1 (fontified t)) . -6204) ((marker . 6204) . -1) ((marker . 6204) . -1) ((marker . 6204) . -1) ((marker . 6204) . -1) ((marker . 6204) . -1) ((marker . 6204) . -1) ((marker . 6204) . -1) nil (#("
+" 0 1 (fontified t)) . -6205) ((marker . 6204) . -1) ((marker . 6204) . -1) ((marker . 6204) . -1) ((marker . 6204) . -1) ((marker . 6204) . -1) ((marker . 6204) . -1) ((marker . 6204) . -1) nil (#(".syntaxhighlighter table {
+    margin:5px !important;
+    border:solid 1px #EEE !important;
+}
+.syntaxhighlighter .line.alt2 {
+    background-color: #F8F8F8 !important;
+}
+" 0 25 (fontified t face (css-selector)) 25 31 (fontified t) 31 37 (fontified t face css-property) 37 42 (fontified t) 42 52 (fontified t face font-lock-builtin-face) 52 58 (fontified t) 58 64 (fontified t face css-property) 64 80 (fontified t) 80 90 (fontified t face font-lock-builtin-face) 90 94 (fontified t) 94 124 (fontified t face (css-selector)) 124 130 (fontified t) 130 146 (fontified t face css-property) 146 156 (fontified t) 156 166 (fontified t face font-lock-builtin-face) 166 168 (fontified t) 168 169 (fontified t rear-nonsticky t) 169 170 (fontified t)) . 6206) (t . 1376102872) ((marker . 6204) . -169) ((marker . 6204) . -169) ((marker . 6204) . -27) ((marker . 6204) . -27) ((marker) . -170) nil (nil rear-nonsticky nil 6374 . 6375) (nil fontified nil 6206 . 6375) (6206 . 6375) nil (6204 . 6206) (t . 1278043140) nil undo-tree-canary))
