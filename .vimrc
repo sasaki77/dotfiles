@@ -98,7 +98,8 @@ else
 	set clipboard& clipboard+=unnamed
 endif
 
-set history=200 " Exコマンド記録上限を設定
+set history=200      "Exコマンド記録上限を設定
+set pastetoggle=<F5> "pasteオプションのトグルをF5に設定
 
 " ======================================== 
 " Display Settings
