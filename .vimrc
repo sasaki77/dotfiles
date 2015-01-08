@@ -1,13 +1,16 @@
 " ======================================== 
 " NeoBundle Settings
 " ======================================== 
-set nocompatible
 filetype off
 if has('vim_starting')
-  set runtimepath+=~/.vim/neobundle.vim.git
+  if &compatible
+    set nocompatible
+  endif
+
+  set runtimepath+=~/.vim/bundle/neobundle.vim
 endif
 
-call neobundle#rc(expand('~/.vim/bundle/'))
+call neobundle#begin(expand('~/.vim/bundle/'))
 
 " NeoBundle自身をNeoBundleで管理する
 NeoBundleFetch 'Shougo/neobundle.vim'
@@ -16,8 +19,9 @@ NeoBundle 'Shougo/neocomplcache'
 NeoBundle 'Shougo/neosnippet'
 NeoBundle 'honza/vim-snippets'
 
-filetype plugin on
-filetype indent on
+call neobundle#end()
+
+filetype plugin indent on
 
 " NeoBundle Installation check
 NeoBundleCheck
@@ -221,21 +225,6 @@ inoremap <expr><C-l> neocomplcache#complete_common_string()
 
 " Recommended key-mappings.
 " <CR>: close popup and save indent.
-inoremap <silent> <CR> <C-r>=<SID>my_cr_function()<CR>
-function! s:my_cr_function()
-	return neocomplcache#smart_close_popup() . "\<CR>"
-	" For no inserting <CR> key.
-	"return pumvisible() ?
-	neocomplcache#close_popup() : "\<CR>"
-endfunction
-" <TAB>: completion.
-" inoremap <expr><TAB>  pumvisible() ? "\<C-n>" :
-"\<TAB>"
-" <C-h>, <BS>: close popup and delete backword char.
-inoremap <expr><C-h> neocomplcache#smart_close_popup()."\<C-h>"
-inoremap <expr><BS>  neocomplcache#smart_close_popup()."\<C-h>"
-inoremap <expr><C-y> neocomplcache#close_popup()
-inoremap <expr><C-e> neocomplcache#cancel_popup()
 " Close popup by <Space>.
 "inoremap <expr><Space> pumvisible() ? neocomplcache#close_popup() : "\<Space>"
 
