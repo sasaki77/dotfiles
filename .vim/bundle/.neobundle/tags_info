@@ -1,2 +1,4 @@
 neobundle.vim
 neocomplcache
+neosnippet
+vim-snippets

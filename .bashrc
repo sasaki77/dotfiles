@@ -4,6 +4,7 @@ export PATH=/opt/local/bin:/opt/local/sbin/:$PATH
 export PATH=/Applications/android-sdk-mac/sdk/tools:$PATH
 export PATH=/Applications/android-sdk-mac/sdk/platform-tools:$PATH
 export PATH=/Applications/PictPrinter.app/Contents/MacOS:$PATH
+export PATH=/opt/local/mongodb/bin:$PATH
 
 export MANPATH=/opt/local/man:$MANPATH
 

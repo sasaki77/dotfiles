@@ -13,7 +13,8 @@ call neobundle#rc(expand('~/.vim/bundle/'))
 NeoBundleFetch 'Shougo/neobundle.vim'
 
 NeoBundle 'Shougo/neocomplcache'
-"NeoBundle 'Shougo/neosnippet'
+NeoBundle 'Shougo/neosnippet'
+NeoBundle 'honza/vim-snippets'
 
 filetype plugin on
 filetype indent on
@@ -93,12 +94,13 @@ else
 	set clipboard& clipboard+=unnamed
 endif
 
+set history=200 " Exコマンド記録上限を設定
+
 " ======================================== 
 " Display Settings
 " ======================================== 
 set nowrap	" 折り返しなし
 set textwidth=0	"自動的に改行が入るのを無効化
-"set colorcolumn=80	" その代わり80文字目にラインを入れる
 
 " スクリーンベルを無効化
 set t_vb=
@@ -125,15 +127,6 @@ set ruler
 " 入力モード中に素早くjjと入力した場合はESCとみなす
 inoremap jj <Esc>
 
-" 括弧入力時その中に戻る
-inoremap {} {}<Left>
-inoremap [] []<Left>
-inoremap () ()<Left>
-inoremap “” “”<Left>
-inoremap ” ”<Left>
-inoremap <> <><Left>
-inoremap “ “<Left>
-
 " ESCを二回押すことでハイライトを消す
 nmap <silent> <ESC><ESC> :nohlsearch<CR>
 
@@ -148,9 +141,6 @@ nnoremap g# g#zz
 " j,kによる移動を折り返されたテキストでも自然に振る舞うように変更
 "nnoremap j gj
 "nnoremap k gk
-
-" vを二回で行末まで選択
-vnoremap v $h
 
 " Ctrl + hjklでウィンドウ間を移動
 nnoremap <C-h> <C-w>h
@@ -169,10 +159,10 @@ nnoremap <S-Up>    <C-w>-<CR>
 nnoremap <S-Down>  <C-w>+<CR>
 
 " make,grep などのコマンド後に自動的にQuickFixを開く
-autocmd MyAutoCmd QuickfixCmdPost make,grep,grepadd,vimgrep,copen
+"autocmd MyAutoCmd QuickfixCmdPost make,grep,grepadd,vimgrep,copen
 
 " QuickFix及びHelpではqでバッファを閉じる
-autocmd MyAutoCmd FileType help,qf nnoremap <buffer> q <C-w>c
+"autocmd MyAutoCmd FileType help,qf nnoremap <buffer> q <C-w>c
 
 " :eなどでファイルを開く際にフォルダが存在しない場合は自動作成
 function! s:mkdir(dir, force)
@@ -292,20 +282,20 @@ let g:neocomplcache_omni_patterns.perl = '\h\w*->\h\w*\|\h\w*::'
 "" Snippets Settings
 "" ========================================
 "" Plugin key-mappings.
-"imap <C-k>     <Plug>(neosnippet_expand_or_jump)
-"smap <C-k>     <Plug>(neosnippet_expand_or_jump)
+imap <C-k>     <Plug>(neosnippet_expand_or_jump)
+smap <C-k>     <Plug>(neosnippet_expand_or_jump)
 "
 "" SuperTab like snippets behavior.
-"imap <expr><TAB> neosnippet#expandable() <Bar><bar> neosnippet#jumpable() ?  "\<Plug>(neosnippet_expand_or_jump)" : pumvisible() ? "\<C-n>" : "\<TAB>"
-"smap <expr><TAB> neosnippet#expandable() <Bar><bar> neosnippet#jumpable() ?  "\<Plug>(neosnippet_expand_or_jump)" : "\<TAB>"
+imap <expr><TAB> neosnippet#expandable() <Bar><bar> neosnippet#jumpable() ?  "\<Plug>(neosnippet_expand_or_jump)" : pumvisible() ? "\<C-n>" : "\<TAB>"
+smap <expr><TAB> neosnippet#expandable() <Bar><bar> neosnippet#jumpable() ?  "\<Plug>(neosnippet_expand_or_jump)" : "\<TAB>"
 "
 "" For snippet_complete marker.
-"if has('conceal')
-"	set conceallevel=2 concealcursor=i
-"endif
+if has('conceal')
+	set conceallevel=2 concealcursor=i
+endif
 "
 "" Enable snipMate compatibility feature.
-"let g:neosnippet#enable_snipmate_compatibility = 1
+let g:neosnippet#enable_snipmate_compatibility = 1
 "
 "" Tell Neosnippet about the other snippets
-"let g:neosnippet#snippets_directory='~/.vim/snippets'
+let g:neosnippet#snippets_directory='~/.vim/bundle/vim-snippets/snippets'
