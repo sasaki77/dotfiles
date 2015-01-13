@@ -19,7 +19,7 @@ NeoBundle 'Shougo/neocomplcache'
 NeoBundle 'Shougo/neosnippet'
 NeoBundle 'Shougo/neosnippet-snippets'
 NeoBundle 'honza/vim-snippets'
-NeoBundle 'The-NERD-tree'
+NeoBundle 'scrooloose/nerdtree'
 
 call neobundle#end()
 
@@ -284,3 +284,8 @@ let g:neosnippet#enable_snipmate_compatibility = 1
 "
 "" Tell Neosnippet about the other snippets
 let g:neosnippet#snippets_directory='~/.vim/bundle/vim-snippets/snippets'
+
+"" ========================================
+"" NERDTree Settings
+"" ========================================
+nnoremap gt :NERDTreeToggle<CR>
