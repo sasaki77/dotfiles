@@ -1,6 +1,8 @@
 neobundle.vim
 neocomplcache
+neomru.vim
 neosnippet
 neosnippet-snippets
 nerdtree
+unite.vim
 vim-snippets

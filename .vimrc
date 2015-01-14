@@ -15,6 +15,8 @@ call neobundle#begin(expand('~/.vim/bundle/'))
 " NeoBundle自身をNeoBundleで管理する
 NeoBundleFetch 'Shougo/neobundle.vim'
 
+NeoBundle 'Shougo/unite.vim'
+NeoBundle 'Shougo/neomru.vim'
 NeoBundle 'Shougo/neocomplcache'
 NeoBundle 'Shougo/neosnippet'
 NeoBundle 'Shougo/neosnippet-snippets'
@@ -288,4 +290,16 @@ let g:neosnippet#snippets_directory='~/.vim/bundle/vim-snippets/snippets'
 "" ========================================
 "" NERDTree Settings
 "" ========================================
-nnoremap gt :NERDTreeToggle<CR>
+nnoremap <silent> <Space>t :NERDTreeToggle<CR>
+
+"" ========================================
+"" Unite Settings
+"" ========================================
+nnoremap [unite]    <Nop>
+nmap     <Space>u [unite]
+
+nnoremap <silent> [unite]c   :<C-u>UniteWithCurrentDir -buffer-name=files buffer file_mru bookmark file<CR>
+nnoremap <silent> [unite]b   :<C-u>Unite buffer<CR>
+nnoremap <silent> [unite]u   :<C-u>Unite file_mru buffer<CR>
+nnoremap <silent> [unite]r   :<C-u>Unite -buffer-name=register register<CR>
+nnoremap <silent> [unite]y   :<C-u>Unite history/yank<CR>
