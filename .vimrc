@@ -22,6 +22,17 @@ NeoBundle 'Shougo/neosnippet'
 NeoBundle 'Shougo/neosnippet-snippets'
 NeoBundle 'honza/vim-snippets'
 NeoBundle 'scrooloose/nerdtree'
+NeoBundle 'tpope/vim-surround'
+
+NeoBundle 'Shougo/vimproc.vim', {
+\ 'build' : {
+\     'windows' : 'tools\\update-dll-mingw',
+\     'cygwin' : 'make -f make_cygwin.mak',
+\     'mac' : 'make -f make_mac.mak',
+\     'linux' : 'make',
+\     'unix' : 'gmake',
+\    },
+\ }
 
 call neobundle#end()
 
@@ -148,8 +159,10 @@ nnoremap g* g*zz
 nnoremap g# g#zz
 
 " j,kによる移動を折り返されたテキストでも自然に振る舞うように変更
-"nnoremap j gj
-"nnoremap k gk
+nnoremap j gj
+nnoremap gj j
+nnoremap k gk
+nnoremap gk k
 
 " Ctrl + hjklでウィンドウ間を移動
 nnoremap <C-h> <C-w>h
@@ -166,6 +179,9 @@ nnoremap <S-Left>  <C-w><<CR>
 nnoremap <S-Right> <C-w>><CR>
 nnoremap <S-Up>    <C-w>-<CR>
 nnoremap <S-Down>  <C-w>+<CR>
+
+" コマンドラインプロンプトで%:hを手早く入力
+cnoremap <expr> %% getcmdtype() == ':' ? expand('%:h').'/' : '%%'
 
 " make,grep などのコマンド後に自動的にQuickFixを開く
 "autocmd MyAutoCmd QuickfixCmdPost make,grep,grepadd,vimgrep,copen
@@ -303,3 +319,5 @@ nnoremap <silent> [unite]b   :<C-u>Unite buffer<CR>
 nnoremap <silent> [unite]u   :<C-u>Unite file_mru buffer<CR>
 nnoremap <silent> [unite]r   :<C-u>Unite -buffer-name=register register<CR>
 nnoremap <silent> [unite]y   :<C-u>Unite history/yank<CR>
+nnoremap <silent> [unite]t   :<C-u>Unite tab<CR>
+nnoremap <silent> [unite]g   :<C-u>Unite grep<CR>
