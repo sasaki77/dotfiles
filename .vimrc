@@ -23,6 +23,7 @@ NeoBundle 'Shougo/neosnippet-snippets'
 NeoBundle 'honza/vim-snippets'
 NeoBundle 'scrooloose/nerdtree'
 NeoBundle 'tpope/vim-surround'
+NeoBundle 'digitaltoad/vim-jade'
 
 NeoBundle 'Shougo/vimproc.vim', {
 \ 'build' : {
