@@ -1,7 +1,0 @@
-# -*- mode: snippet -*-
-# name: itembox
-# key: ib
-# --
-\begin{itembox}[${1:l}]{${2:title}}
-$0
-\end{itembox}

@@ -1,2 +1,0 @@
-
-((digest . "046e3459b16dbde278c46de7d713614e") (undo-list nil (507 . 509) nil (#("っっｐ" 0 2 (fontified t face font-lock-type-face) 2 3 (fontified t c-type c-decl-id-start face font-lock-type-face)) . -405) (405 . 408) (#("っｐ" 0 1 (fontified t face font-lock-type-face) 1 2 (fontified t c-type c-decl-id-start face font-lock-type-face)) . -405) (405 . 407) (#("ｐ" 0 1 (fontified t c-type c-decl-id-start face font-lock-type-face)) . -405) (405 . 406) 428 (t . 1394253544)))

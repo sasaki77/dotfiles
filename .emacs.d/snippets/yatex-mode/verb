@@ -1,5 +1,0 @@
-# -*- mode: snippet -*-
-# name: verb
-# key: vb
-# --
-\verb|${1:character}|

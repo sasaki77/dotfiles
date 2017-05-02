@@ -1,5 +1,0 @@
-# -*- mode: snippet -*-
-# name: align
-# key: align
-# --
-align="${1:$$(yas-choose-value '("left" "center" "right" "top" "middle" "bottom"))}"

@@ -1,5 +1,0 @@
-# -*- mode: snippet -*-
-# name: platex
-# key: pt
-# --
-%#!platex --kanji=sjis main.tex

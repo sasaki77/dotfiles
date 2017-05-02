@@ -1,5 +1,0 @@
-# -*- mode: snippet -*-
-# name: name
-# key: name
-# --
-<a name="$1">$0</a>

@@ -1,2 +1,0 @@
-
-((digest . "9aaafdbae27aaac049a376c04b4a7604") (undo-list nil (18970 . 18981) nil (#("i" 0 1 (fontified t face font-lock-string-face)) . 18970) nil (#("v" 0 1 (fontified t face font-lock-string-face)) . 18970) nil (#("d" 0 1 (fontified t face font-lock-string-face)) . 18970) nil (#("x" 0 1 (fontified t face font-lock-string-face)) . 18970) nil (#("M" 0 1 (fontified t face font-lock-string-face)) . 18970) (t . 1368705072) nil undo-tree-canary))

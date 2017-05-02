@@ -1,7 +1,0 @@
-# -*- mode: snippet -*-
-# name: center
-# key: cen
-# --
-\begin{center}
-$0
-\end{center}
