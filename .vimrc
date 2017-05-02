@@ -1,4 +1,28 @@
 " ======================================== 
+" vim-plug
+" ======================================== 
+if has("vim_starting")
+  if filereadable("~/.vim/autoload/plug.vim")
+    let g:has_vim_plug = 0
+    echo "you should download plug-vim"
+  else
+    let g:has_vim_plug = 1
+  endif
+endif
+
+if has_vim_plug
+  " Specify a directory for plugins (for Neovim: ~/.local/share/nvim/plugged)
+  call plug#begin('~/.vim/plugged')
+
+  " Make sure you use single quotes
+  " Shorthand notation
+  Plug 'tpope/vim-surround'
+
+  " Initialize plugin system
+  call plug#end()
+endif
+
+" ======================================== 
 " Auto Command
 " ======================================== 
 " release autogroup in MyAutoCmd
