@@ -18,7 +18,7 @@ endif
 set wildmenu
 
 " ======================================== 
-" Indentt Settings
+" Indent Settings
 " ======================================== 
 set autoindent	  "新しい行のインデントを現在行と同じにする
 set smartindent	  "新しい行を作った時に高度な自動インデントを行う
