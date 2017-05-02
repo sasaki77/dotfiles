@@ -17,6 +17,7 @@ if has_vim_plug
   " Make sure you use single quotes
   " Shorthand notation
   Plug 'tpope/vim-surround'
+  Plug 'junegunn/vim-easy-align'
 
   " Initialize plugin system
   call plug#end()
