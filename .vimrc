@@ -38,13 +38,14 @@ set hlsearch	" 検索マッチテキストハイライト
 " ======================================== 
 " Edit Settings
 " ======================================== 
-set shiftround	" <や>でインデントする際に'shiftwidth'の倍数に丸める
-set infercase	" 補完時に大文字小文字を区別しない
-set virtualedit=all	" カーソルを文字が存在しない部分でも動けるようにする
-set hidden	" バッファを閉じる代わりに隠す
-set switchbuf=useopen	" 新しく開く代わりに既に開いてあるバッファを開く
-set showmatch	" 対応する括弧などをハイライト表示する
-set matchtime=3	" 対応括弧のハイライト時間を3秒にする
+set fenc=utf-8        " 文字コードをUFT-8に設定
+set shiftround	      " <や>でインデントする際に'shiftwidth'の倍数に丸める
+set infercase	      " 補完時に大文字小文字を区別しない
+set virtualedit=all	  " カーソルを文字が存在しない部分でも動けるようにする
+set hidden	          " バッファを閉じる代わりに隠す
+set switchbuf=useopen " 新しく開く代わりに既に開いてあるバッファを開く
+set showmatch	      " 対応する括弧などをハイライト表示する
+set matchtime=3	      " 対応括弧のハイライト時間を3秒にする
 
 " 対応括弧の追加
 set matchpairs& matchpairs+=<:>
