@@ -1,62 +1,10 @@
 " ======================================== 
-" NeoBundle Settings
-" ======================================== 
-filetype off
-if has('vim_starting')
-  if &compatible
-    set nocompatible
-  endif
-
-  set runtimepath+=~/.vim/bundle/neobundle.vim
-endif
-
-call neobundle#begin(expand('~/.vim/bundle/'))
-
-" NeoBundle自身をNeoBundleで管理する
-NeoBundleFetch 'Shougo/neobundle.vim'
-
-NeoBundle 'Shougo/unite.vim'
-NeoBundle 'Shougo/neomru.vim'
-NeoBundle 'Shougo/neocomplcache'
-NeoBundle 'Shougo/neosnippet'
-NeoBundle 'Shougo/neosnippet-snippets'
-NeoBundle 'honza/vim-snippets'
-NeoBundle 'scrooloose/nerdtree'
-NeoBundle 'tpope/vim-surround'
-NeoBundle 'digitaltoad/vim-jade'
-
-NeoBundle 'Shougo/vimproc.vim', {
-\ 'build' : {
-\     'windows' : 'tools\\update-dll-mingw',
-\     'cygwin' : 'make -f make_cygwin.mak',
-\     'mac' : 'make -f make_mac.mak',
-\     'linux' : 'make',
-\     'unix' : 'gmake',
-\    },
-\ }
-
-call neobundle#end()
-
-filetype plugin indent on
-
-" NeoBundle Installation check
-NeoBundleCheck
-
-" ======================================== 
 " Auto Command
 " ======================================== 
 " release autogroup in MyAutoCmd
 augroup MyAutoCmd
 	autocmd!
 augroup END
-
-" 入力モード時，ステータスラインのカラーを変更
-augroup InsertHook
-autocmd!
-autocmd InsertEnter * highlight StatusLine guifg=#ccdc90 guibg=#2E4340
-autocmd InsertLeave * highlight StatusLine guifg=#2E4340 guibg=#ccdc90
-augroup END
-
 
 " ======================================== 
 " System Settings
@@ -106,22 +54,13 @@ set matchpairs& matchpairs+=':'
 " バックスペースでなんでも消せるようにする
 set backspace=indent,eol,start
 
-" クリップボードをデフォルトのレジスタとして指定。後にYankRingを使うので
-" 'unnamedplus'が存在しているかどうかで設定を分ける必要がある
-if has('unnamedplus')
-	set clipboard& clipboard+=unnamedplus
-else
-	" set clipboard& clipboard+=unnamed,autoselect 2013-06-24 10:00 autoselect 削除
-	set clipboard& clipboard+=unnamed
-endif
-
 set history=200      "Exコマンド記録上限を設定
 set pastetoggle=<F5> "pasteオプションのトグルをF5に設定
 
 " ======================================== 
 " Display Settings
 " ======================================== 
-set nowrap	" 折り返しなし
+set wrap	    "折り返しあり
 set textwidth=0	"自動的に改行が入るのを無効化
 
 " スクリーンベルを無効化
@@ -138,10 +77,6 @@ endif
 
 " ステータスラインを常に表示する
 set ruler
-
-" ======================================== 
-" Color Settings
-" ======================================== 
 
 " ======================================== 
 " Macro and Key mapping
@@ -199,127 +134,3 @@ function! s:mkdir(dir, force)
 	endif
 endfunction
 autocmd MyAutoCmd BufWritePre * call s:mkdir(expand('<afile>:p:h'), v:cmdbang)
-
-" ========================================
-" Plugin Settings
-" ========================================
-" ========================================
-" neocomplcache
-" ========================================
-" Disable AutoComplPop.
-let g:acp_enableAtStartup = 0
-" 起動時に有効化
-let g:neocomplcache_enable_at_startup = 1
-" Use smartcase.
-let g:neocomplcache_enable_smart_case = 1
-" Set minimum syntax keyword length.
-let g:neocomplcache_min_syntax_length = 3
-let g:neocomplcache_lock_buffer_name_pattern = '\*ku\*'
-let g:neocomplcache_auto_completion_start_length = 5
-" ポップアップメニューで表示される候補の数
-let g:neocomplcache_max_list = 20
-" シンタックスをキャッシュするときの最小文字長
-let g:neocomplcache_min_syntax_length = 3
-
-" Enable heavy features.
-" Use camel case completion.
-"let g:neocomplcache_enable_camel_case_completion = 1
-" Use underbar completion.
-let g:neocomplcache_enable_underbar_completion = 1
-
-" ファイルタイプごとにディクショナリを設定
-let g:neocomplcache_dictionary_filetype_lists = {
-			\ 'default' : '',
-			\ 'vimshell' : $HOME.'/.vimshell_hist',
-			\ 'scheme' : $HOME.'/.gosh_completions'
-			\ }
-
-" Define keyword.
-if !exists('g:neocomplcache_keyword_patterns')
-	let g:neocomplcache_keyword_patterns = {}
-endif
-let g:neocomplcache_keyword_patterns['default'] = '\h\w*'
-
-" Plugin key-mappings.
-" 補完のキャンセル
-inoremap <expr><C-g>     neocomplcache#undo_completion()
-" 補完候補の共通する部分を補完
-inoremap <expr><C-l>     neocomplcache#complete_common_string()
-
-" Recommended key-mappings.
-" <CR>: close popup and save indent.
-inoremap <silent> <CR> <C-r>=<SID>my_cr_function()<CR>
-function! s:my_cr_function()
-  return neocomplcache#smart_close_popup() . "\<CR>"
-  " For no inserting <CR> key.
-  "return pumvisible() ? neocomplcache#close_popup() : "\<CR>"
-endfunction
-" <TAB>: completion.
-inoremap <expr><TAB>  pumvisible() ? "\<C-n>" : "\<TAB>"
-" <C-h>, <BS>: close popup and delete backword char.
-inoremap <expr><C-h> neocomplcache#smart_close_popup()."\<C-h>"
-inoremap <expr><BS> neocomplcache#smart_close_popup()."\<C-h>"
-inoremap <expr><C-y>  neocomplcache#close_popup()
-inoremap <expr><C-e>  neocomplcache#cancel_popup()
-
-" Enable omni completion.
-autocmd FileType css setlocal omnifunc=csscomplete#CompleteCSS
-autocmd FileType html,markdown setlocal omnifunc=htmlcomplete#CompleteTags
-autocmd FileType javascript setlocal omnifunc=javascriptcomplete#CompleteJS
-"autocmd FileType python setlocal omnifunc=pythoncomplete#Complete
-autocmd FileType xml setlocal omnifunc=xmlcomplete#CompleteTags
-
-" Enable heavy omni completion.
-if !exists('g:neocomplcache_omni_patterns')
-   let g:neocomplcache_omni_patterns = {}
-endif
-
-let g:neocomplcache_omni_patterns.php = '[^. \t]->\h\w*\|\h\w*::'
-let g:neocomplcache_omni_patterns.c = '[^.[:digit:] *\t]\%(\.\|->\)'
-let g:neocomplcache_omni_patterns.cpp = '[^.[:digit:] *\t]\%(\.\|->\)\|\h\w*::'
-
-" For perlomni.vim setting.
-" https://github.com/c9s/perlomni.vim
-let g:neocomplcache_omni_patterns.perl = '\h\w*->\h\w*\|\h\w*::'
-
-"" ========================================
-"" Snippets Settings
-"" ========================================
-"" Plugin key-mappings.
-imap <C-k>     <Plug>(neosnippet_expand_or_jump)
-smap <C-k>     <Plug>(neosnippet_expand_or_jump)
-xmap <C-k>     <Plug>(neosnippet_expand_target)
-"
-"" SuperTab like snippets behavior.
-imap <expr><TAB> neosnippet#expandable() <Bar><bar> neosnippet#jumpable() ?  "\<Plug>(neosnippet_expand_or_jump)" : pumvisible() ? "\<C-n>" : "\<TAB>"
-smap <expr><TAB> neosnippet#expandable() <Bar><bar> neosnippet#jumpable() ?  "\<Plug>(neosnippet_expand_or_jump)" : "\<TAB>"
-"
-"" For snippet_complete marker.
-if has('conceal')
-	set conceallevel=2 concealcursor=i
-endif
-"
-"" Enable snipMate compatibility feature.
-let g:neosnippet#enable_snipmate_compatibility = 1
-"
-"" Tell Neosnippet about the other snippets
-let g:neosnippet#snippets_directory='~/.vim/bundle/vim-snippets/snippets'
-
-"" ========================================
-"" NERDTree Settings
-"" ========================================
-nnoremap <silent> <Space>t :NERDTreeToggle<CR>
-
-"" ========================================
-"" Unite Settings
-"" ========================================
-nnoremap [unite]    <Nop>
-nmap     <Space>u [unite]
-
-nnoremap <silent> [unite]c   :<C-u>UniteWithCurrentDir -buffer-name=files buffer file_mru bookmark file<CR>
-nnoremap <silent> [unite]b   :<C-u>Unite buffer<CR>
-nnoremap <silent> [unite]u   :<C-u>Unite file_mru buffer<CR>
-nnoremap <silent> [unite]r   :<C-u>Unite -buffer-name=register register<CR>
-nnoremap <silent> [unite]y   :<C-u>Unite history/yank<CR>
-nnoremap <silent> [unite]t   :<C-u>Unite tab<CR>
-nnoremap <silent> [unite]g   :<C-u>Unite grep<CR>
