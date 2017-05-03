@@ -32,6 +32,8 @@ augroup MyAutoCmd
 	autocmd!
 augroup END
 
+autocmd QuickfixCmdPost make,grep,grepadd,vimgrep copen
+
 " ======================================== 
 " System Settings
 " ======================================== 
