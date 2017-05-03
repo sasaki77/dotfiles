@@ -165,6 +165,8 @@ autocmd MyAutoCmd BufWritePre * call s:mkdir(expand('<afile>:p:h'), v:cmdbang)
 " ======================================== 
 " plugin-memolist.vim
 " ======================================== 
+let g:memolist_path = "$HOME/GoogleDrive/memo"
+
 nnoremap <Leader>mn  :MemoNew<CR>
 nnoremap <Leader>ml  :MemoList<CR>
 nnoremap <Leader>mg  :MemoGrep<CR>
