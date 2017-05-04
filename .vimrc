@@ -19,6 +19,7 @@ if has_vim_plug
   Plug 'tpope/vim-surround'
   Plug 'junegunn/vim-easy-align'
   Plug 'glidenote/memolist.vim'
+  Plug 'Shougo/unite.vim'
 
   " Initialize plugin system
   call plug#end()
@@ -195,13 +196,13 @@ let g:memolist_vimfiler = 0
 let g:memolist_filename_prefix_none = 0
 
 " use unite (default 0)
-let g:memolist_unite = 0
+let g:memolist_unite = 1
 
 " use arbitrary unite source (default is 'file')
-let g:memolist_unite_source = "file"
+let g:memolist_unite_source = "file_rec"
 
 " use arbitrary unite option (default is empty)
-let g:memolist_unite_option = ""
+let g:memolist_unite_option = "-start-insert"
 
 " use denite (default 0)
 let g:memolist_denite = 0
