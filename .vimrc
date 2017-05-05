@@ -20,6 +20,11 @@ if has_vim_plug
   Plug 'junegunn/vim-easy-align'
   Plug 'glidenote/memolist.vim'
   Plug 'Shougo/unite.vim'
+  Plug 'honza/vim-snippets'
+
+  if v:version >= 704
+      Plug 'SirVer/ultisnips'
+  endif
 
   " Initialize plugin system
   call plug#end()
