@@ -19,10 +19,13 @@ if has_vim_plug
   Plug 'tpope/vim-surround'
   Plug 'junegunn/vim-easy-align'
   Plug 'glidenote/memolist.vim'
-  Plug 'Shougo/unite.vim'
-  Plug 'honza/vim-snippets'
+
+  if v:version >= 703
+      Plug 'Shougo/unite.vim'
+  endif
 
   if v:version >= 704
+      Plug 'honza/vim-snippets'
       Plug 'SirVer/ultisnips'
   endif
 
