@@ -73,9 +73,15 @@ set incsearch	" インクリメンタルサーチ
 set hlsearch	" 検索マッチテキストハイライト
 
 " ======================================== 
+" Encoding
+" ======================================== 
+set encoding=utf-8
+set fileencodings=iso-2022-jp,cp932,sjis,euc-jp,utf-8
+set fenc=utf-8        " 文字コードをUFT-8に設定
+
+" ======================================== 
 " Edit Settings
 " ======================================== 
-set fenc=utf-8        " 文字コードをUFT-8に設定
 set shiftround	      " <や>でインデントする際に'shiftwidth'の倍数に丸める
 set infercase	      " 補完時に大文字小文字を区別しない
 set virtualedit=all	  " カーソルを文字が存在しない部分でも動けるようにする
