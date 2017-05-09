@@ -19,6 +19,7 @@ if has_vim_plug
   Plug 'tpope/vim-surround'
   Plug 'junegunn/vim-easy-align'
   Plug 'glidenote/memolist.vim'
+  Plug 'nathanaelkane/vim-indent-guides'
 
   if v:version >= 703
       Plug 'Shougo/unite.vim'
