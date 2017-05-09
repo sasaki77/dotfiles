@@ -256,3 +256,12 @@ nmap ga <Plug>(EasyAlign)
 let g:UltiSnipsExpandTrigger="<tab>"
 let g:UltiSnipsJumpForwardTrigger="<c-b>"
 let g:UltiSnipsJumpBackwardTrigger="<c-z>"
+
+" ======================================== 
+" plugin-vim-indent-guides
+" ======================================== 
+let g:indent_guides_auto_colors = 0
+let g:indent_guides_guide_size  = 1
+let g:indent_guides_start_level = 1
+autocmd VimEnter,Colorscheme * :hi IndentGuidesOdd  guibg=darkgrey ctermbg=grey
+autocmd VimEnter,Colorscheme * :hi IndentGuidesEven guibg=grey ctermbg=lightgrey
