@@ -214,7 +214,7 @@ let g:memolist_filename_prefix_none = 0
 let g:memolist_unite = 1
 
 " use arbitrary unite source (default is 'file')
-let g:memolist_unite_source = "file_rec"
+let g:memolist_unite_source = "file"
 
 " use arbitrary unite option (default is empty)
 let g:memolist_unite_option = "-start-insert"
