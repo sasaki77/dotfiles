@@ -20,6 +20,7 @@ if has_vim_plug
   Plug 'junegunn/vim-easy-align'
   Plug 'glidenote/memolist.vim'
   Plug 'nathanaelkane/vim-indent-guides'
+  Plug 'luochen1990/rainbow'
 
   if v:version >= 703
       Plug 'Shougo/unite.vim'
@@ -271,3 +272,8 @@ let g:indent_guides_guide_size  = 1
 let g:indent_guides_start_level = 1
 autocmd VimEnter,Colorscheme * :hi IndentGuidesOdd  guibg=darkgrey ctermbg=grey
 autocmd VimEnter,Colorscheme * :hi IndentGuidesEven guibg=grey ctermbg=lightgrey
+
+" ======================================== 
+" plugin-rainbow
+" ======================================== 
+let g:rainbow_active = 1 "0 if you want to enable it later via :RainbowToggle
