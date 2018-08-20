@@ -77,7 +77,7 @@ set hlsearch	" 検索マッチテキストハイライト
 " Encoding
 " ======================================== 
 set encoding=utf-8
-set fileencodings=iso-2022-jp,cp932,sjis,euc-jp,utf-8
+set fileencodings=utf-8,iso-2022-jp,cp932,sjis,euc-jp
 set fenc=utf-8        " 文字コードをUFT-8に設定
 
 " ======================================== 
@@ -161,6 +161,12 @@ nnoremap <S-Left>  <C-w><<CR>
 nnoremap <S-Right> <C-w>><CR>
 nnoremap <S-Up>    <C-w>-<CR>
 nnoremap <S-Down>  <C-w>+<CR>
+
+" 日本語入力がオンのままでも使えるコマンド(Enterキーは必要)
+inoremap <silent> ｊｊ <ESC>
+nnoremap あ a
+nnoremap い i
+nnoremap お o
 
 " コマンドラインプロンプトで%:hを手早く入力
 cnoremap <expr> %% getcmdtype() == ':' ? expand('%:h').'/' : '%%'
