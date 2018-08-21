@@ -1,6 +1,6 @@
-" ======================================== 
+" =======================================
 " vim-plug
-" ======================================== 
+" =======================================
 if has("vim_starting")
   if filereadable("~/.vim/autoload/plug.vim")
     let g:has_vim_plug = 0
@@ -36,9 +36,9 @@ if has_vim_plug
   call plug#end()
 endif
 
-" ======================================== 
+" =======================================
 " Auto Command
-" ======================================== 
+" =======================================
 " release autogroup in MyAutoCmd
 augroup MyAutoCmd
 	autocmd!
@@ -46,9 +46,9 @@ augroup END
 
 autocmd QuickfixCmdPost make,grep,grepadd,vimgrep copen
 
-" ======================================== 
+" =======================================
 " System Settings
-" ======================================== 
+" =======================================
 " マウスの設定
 if has('mouse')
 	set mouse=a
@@ -57,9 +57,9 @@ endif
 " コマンドライン補完の強化
 set wildmenu
 
-" ======================================== 
+" =======================================
 " Indent Settings
-" ======================================== 
+" =======================================
 set autoindent	  "新しい行のインデントを現在行と同じにする
 set smartindent	  "新しい行を作った時に高度な自動インデントを行う
 set smarttab	  "行頭の余白内でTabを打ち込むと，"shiftwidth"の数だけインデントする
@@ -67,24 +67,24 @@ set tabstop=4	  "ファイル内の<Tab>が対応する空白の数
 set shiftwidth=4  "シフト移動幅
 set expandtab     "インサートモードでTabを押した時に空白文字を入力する
 
-" ======================================== 
+" =======================================
 " Search Settings
-" ======================================== 
+" =======================================
 set ignorecase	" 大文字小文字を区別しない
 set smartcase	" 検索文字に大文字がある場合は大文字小文字を区別
 set incsearch	" インクリメンタルサーチ
 set hlsearch	" 検索マッチテキストハイライト
 
-" ======================================== 
+" =======================================
 " Encoding
-" ======================================== 
+" =======================================
 set encoding=utf-8
 set fileencodings=utf-8,iso-2022-jp,cp932,sjis,euc-jp
 set fenc=utf-8        " 文字コードをUFT-8に設定
 
-" ======================================== 
+" =======================================
 " Edit Settings
-" ======================================== 
+" =======================================
 set shiftround	      " <や>でインデントする際に'shiftwidth'の倍数に丸める
 set infercase	      " 補完時に大文字小文字を区別しない
 set virtualedit=all	  " カーソルを文字が存在しない部分でも動けるようにする
@@ -104,9 +104,9 @@ set backspace=indent,eol,start
 set history=200      "Exコマンド記録上限を設定
 set pastetoggle=<F5> "pasteオプションのトグルをF5に設定
 
-" ======================================== 
+" =======================================
 " Display Settings
-" ======================================== 
+" =======================================
 set wrap	    "折り返しあり
 set textwidth=0	"自動的に改行が入るのを無効化
 
@@ -125,9 +125,9 @@ endif
 " ステータスラインを常に表示する
 set ruler
 
-" ======================================== 
+" =======================================
 " Macro and Key mapping
-" ======================================== 
+" =======================================
 " 入力モード中に素早くjjと入力した場合はESCとみなす
 inoremap jj <Esc>
 
@@ -188,9 +188,9 @@ function! s:mkdir(dir, force)
 endfunction
 autocmd MyAutoCmd BufWritePre * call s:mkdir(expand('<afile>:p:h'), v:cmdbang)
 
-" ======================================== 
+" =======================================
 " plugin-memolist.vim
-" ======================================== 
+" =======================================
 let g:memolist_path = "$HOME/GoogleDrive/memo"
 
 nnoremap <Leader>mn  :MemoNew<CR>
@@ -249,34 +249,34 @@ let g:memolist_delimiter_yaml_start = "=========="
 " last line string pattern of yaml front matter (default "- - -")
 let g:memolist_delimiter_yaml_end  = "- - -"
 
-" ======================================== 
+" =======================================
 " plugin-vim-easy-align
-" ======================================== 
+" =======================================
 " Start interactive EasyAlign in visual mode (e.g. vipga)
 xmap ga <Plug>(EasyAlign)
 
 " Start interactive EasyAlign for a motion/text object (e.g. gaip)
 nmap ga <Plug>(EasyAlign)
 
-" ======================================== 
+" =======================================
 " plugin-ultisnips
-" ======================================== 
+" =======================================
 let g:UltiSnipsExpandTrigger="<tab>"
 let g:UltiSnipsJumpForwardTrigger="<c-j>"
 let g:UltiSnipsJumpBackwardTrigger="<c-k>"
 
-" ======================================== 
+" =======================================
 " plugin-vim-indent-guides
-" ======================================== 
+" =======================================
 let g:indent_guides_auto_colors = 0
 let g:indent_guides_guide_size  = 1
 let g:indent_guides_start_level = 1
 autocmd VimEnter,Colorscheme * :hi IndentGuidesOdd  guibg=darkgrey ctermbg=grey
 autocmd VimEnter,Colorscheme * :hi IndentGuidesEven guibg=grey ctermbg=lightgrey
 
-" ======================================== 
+" =======================================
 " plugin-rainbow
-" ======================================== 
+" =======================================
 let g:rainbow_active = 1 "0 if you want to enable it later via :RainbowToggle
 
 
