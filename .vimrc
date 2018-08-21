@@ -284,3 +284,13 @@ let g:rainbow_active = 1 "0 if you want to enable it later via :RainbowToggle
 " plugin-nerdtree
 " ========================================
 map <C-o> :NERDTreeToggle<CR>
+
+" ========================================
+" plugin-unite
+nnoremap <silent> gub :<C-u>Unite buffer<CR>
+nnoremap <silent> guf :<C-u>Unite file<CR>
+nnoremap <silent> guu :<C-u>Unite file buffer<CR>
+nnoremap <silent> gur :<C-u>Unite register<CR>
+nnoremap <silent> gum :<C-u>Unite mapping<CR>
+nnoremap <silent> guv :<C-u>Unite vimgrep -auto-preview -buffer-name=search-buffer -vertical<CR>
+nnoremap <silent> gur :<C-u>UniteResume -buffer-name=search-buffer<CR>
