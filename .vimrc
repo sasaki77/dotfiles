@@ -21,6 +21,7 @@ if has_vim_plug
   Plug 'glidenote/memolist.vim'
   Plug 'nathanaelkane/vim-indent-guides'
   Plug 'luochen1990/rainbow'
+  Plug 'scrooloose/nerdtree'
 
   if v:version >= 703
       Plug 'Shougo/unite.vim'
@@ -277,3 +278,9 @@ autocmd VimEnter,Colorscheme * :hi IndentGuidesEven guibg=grey ctermbg=lightgrey
 " plugin-rainbow
 " ======================================== 
 let g:rainbow_active = 1 "0 if you want to enable it later via :RainbowToggle
+
+
+" ========================================
+" plugin-nerdtree
+" ========================================
+map <C-o> :NERDTreeToggle<CR>
