@@ -22,6 +22,8 @@ if has_vim_plug
   Plug 'nathanaelkane/vim-indent-guides'
   Plug 'luochen1990/rainbow'
   Plug 'scrooloose/nerdtree'
+  Plug 'tpope/vim-fugitive'
+  Plug 'tpope/vim-repeat'
 
   if v:version >= 703
       Plug 'Shougo/unite.vim'
