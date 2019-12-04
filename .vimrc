@@ -65,8 +65,8 @@ set wildmenu
 set autoindent	  "新しい行のインデントを現在行と同じにする
 set smartindent	  "新しい行を作った時に高度な自動インデントを行う
 set smarttab	  "行頭の余白内でTabを打ち込むと，"shiftwidth"の数だけインデントする
-set tabstop=4	  "ファイル内の<Tab>が対応する空白の数
-set shiftwidth=4  "シフト移動幅
+set tabstop=2	  "ファイル内の<Tab>が対応する空白の数
+set shiftwidth=2  "シフト移動幅
 set expandtab     "インサートモードでTabを押した時に空白文字を入力する
 
 " =======================================
@@ -189,6 +189,11 @@ function! s:mkdir(dir, force)
 	endif
 endfunction
 autocmd MyAutoCmd BufWritePre * call s:mkdir(expand('<afile>:p:h'), v:cmdbang)
+
+" =======================================
+" Programming Language Settings
+" =======================================
+autocmd Filetype python setlocal tabstop=4 shiftwidth=4 softtabstop=4
 
 " =======================================
 " plugin-memolist.vim
