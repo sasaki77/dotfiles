@@ -24,6 +24,7 @@ if has_vim_plug
   Plug 'scrooloose/nerdtree'
   Plug 'tpope/vim-fugitive'
   Plug 'tpope/vim-repeat'
+  Plug 'leafgarland/typescript-vim'
 
   if v:version >= 703
       Plug 'Shougo/unite.vim'
